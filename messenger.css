@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+aside{
+    width: 250px;
+    height:850px;
+	background-color:lightblue;
+	display:inline-block;
+	font-size:15px;
+	vertical-align:top;
+}
+
+main {
+    width: 600px;
+    height: 850px;
+    display: inline-block;
+    font-size:15px;
+	vertical-align:top;
+}
+footer textarea{
+    background-position: bottom;
+}
