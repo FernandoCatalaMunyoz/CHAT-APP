@@ -11,35 +11,43 @@
     <aside>
         <header>
             <h1>GEEKHUBS MESSENGER</h1>
-            <p>Nombre de Usuario</p>
-            <br><br>
+            <h2>Nombre de Usuario</h2>
+            <p>Nombre de usuario</p>
+
             <h2>Canales</h2>
-            <button type="submit">Crear nuevo canal</button>
+            
+            <input type="text" id="anyadircanal">
+            <button onclick="addHtml()">Crear nuevo canal</button>
             <script src="/APP MENSAJERIA/añadircanales.js"></script>
+            <div id="canales"></div>
+            <br><br>
 
             <h2>Mensajes Privados</h2>
+            
+            <input type="text" id="anyadircanal">
             <button type="submit">Nuevo mensaje privado</button>
-            <script src="/CHAT-APP/canalprivado.js"></script> 
-
-            <br><br><br>
-
-            <label id=buscar for="fname">Buscar:</label>
-            <input type="text" id="fname" name="fname">
+            <script src="/CHAT-APP/canalprivado.js"></script>
+            <div id="mensajeprivado"></div>
             
         </header>
     </aside>
     <main>
+        <p id="buscar">
+            <label id=buscar for="fname">Buscar:</label>
+            <input type="text" id="fname" name="fname">
+        </p>
+        
         <header>
             <h1>Chat</h1>
 
         </header>
-        <footer>
-            <textarea name="Mensaje"  placeholder="Escribe tu mesaje aqui..." id="" cols="200"></textarea>
-            <button type="submit">Enviar</button>
-        </footer>
-       
-    </main>
-    
+        
+    </main> 
+    <footer>
+        <textarea name="Mensaje"  placeholder="Escribe tu mesaje aqui..." id="" cols="200"></textarea>
+        <button type="submit">Enviar</button>
+    </footer>
+   
     
 </body>
 </html>

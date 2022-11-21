@@ -18,9 +18,17 @@ main {
     font-size:15px;
 	vertical-align:top;
     padding: auto;
-    border-color: blanchedalmond;
-}
-main footer {
+    border-color: blue}
+footer {
     padding-bottom: 0px;
     padding-left: 250px;
+    right: 0px;
+}
+main input{
+   right: 0px;
+   padding-right: 0px;
+    
+}
+#buscar {
+   padding-left: 85px;
 }
