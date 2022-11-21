@@ -25,21 +25,48 @@
 
                 <div class="canal-container" id="1">
                     <label>
-                        <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
+                        <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
                         Canal 1
+                    </label>
+                    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
+                </div>
+                <div class="canal-container" id="1">
+                    <label>
+                        <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
+                        Canal 2
                     </label>
                     <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
                 </div>
             </div>
             
             <div1>
-                <h2>Mensajes Privados</h2>
+            <h2>Mensajes Privados</h2>
+            <form action="#" id="canalInput">
+                <input type="text" placeholder="Nuevo canal">
+                <input type="submit" value="+" id="addCanal">            
             
-            <input type="text" id="anyadircanal">
-            <button onclick="addcanal()">Crear nuevo mensaje</button>
-            </div1>
-                       
-            <div2 id="canales"></div2>
+            </form>
+
+            <div id="list" class="list-container">
+
+                <div class="canal-container" id="1">
+                    <label>
+                        <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
+                        Usiario 1
+                    </label>
+                    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
+                </div>
+                <div class="canal-container" id="1">
+                    <label>
+                        <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
+                        Usuario 2
+
+                    </label>
+                    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
+                </div>
+            </div>
+            
+            
            
             <br><br>
             
@@ -48,8 +75,10 @@
     </aside>
     <main>
         <p id="buscar">
-            <label id=buscar for="fname">Buscar:</label>
-            <input type="text" id="fname" name="fname">
+            <label id=buscar for="fname">
+            </label>
+            <input type="text" id="fname" name="fname" placeholder="Buscar...">
+            <button type="button">Buscar</button>
         </p>
         
         <header>

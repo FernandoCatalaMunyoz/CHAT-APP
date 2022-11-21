@@ -35,7 +35,7 @@ form input[type="submit"]:hover{
     display: flex;
     justify-content: space-between;
     margin-bottom: 6px;
-    padding: 16px;
+    padding: 5px;
     font-size: 1.1em;
 }
 #closecanal{
@@ -49,6 +49,7 @@ form input[type="submit"]:hover{
 #closecanal:hover{
     cursor: pointer;
 }
+
 
 
 
@@ -102,11 +103,14 @@ main {
     bottom: 5px;
     left: 320px;
     border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 100px;
     
 }
 main input{
-   right: 0px;
-   padding-right: 0px;
+   margin-left: 5px;
+    right: 0px;
+   padding-left: 5px;
    border-radius: 5px;
    display: inline-block;
     
@@ -119,5 +123,6 @@ main input{
     position: absolute;
     bottom: 5px;
     border-radius: 5px;
+    margin-left: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
