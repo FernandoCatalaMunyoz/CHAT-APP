@@ -1,7 +1,7 @@
 let IdCounter =0;
 let IdCounter2 =0;
 const input = document.querySelector('input[type="text"]');
-const input2 = document.querySelector('input[type="text"]');
+const input2 = document.getElementById('mensajeInput');
 canalInput = document.getElementById('canalInput');
 mensajeInput = document.getElementById('mensajeInput');
 
@@ -27,7 +27,7 @@ let addCanal = ()=>{
   input.value = '';
 }
 
-mensajeInput.addEventListener('submit', ()=>{
+mensajeInput.addEventListener('submit', ()=>{    //aqui no se como seleccionar el segundo input
   addMensaje();
 });
 
