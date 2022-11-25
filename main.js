@@ -1,7 +1,7 @@
 let IdCounter =0;
 let IdCounter2 =0;
 const input = document.querySelector('input[type="text"]');
-const input2 = document.getElementById('mensajeInput');
+const input2 = document.querySelector('input[type="text"]');
 canalInput = document.getElementById('canalInput');
 mensajeInput = document.getElementById('mensajeInput');
 
@@ -38,7 +38,7 @@ let newValue2 = input2.value;
 
 list2.innerHTML += `<div class="list-container" id="${IdCounter2}">
 <label>
-    <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
+    <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
       ${newValue2}
 </label>
 <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
