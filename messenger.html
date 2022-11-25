@@ -5,65 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/CHAT-APP/messenger.css">
+    <link rel="stylesheet" href="/CHAT-APP/styles.css">
 </head>
 <body>
     <aside>
         <header>
             <h1>GEEKHUBS MESSENGER</h1>
-            <h2>Nombre de Usuario</h2>
+            <div>
+                <h2>Fernando Catalá</h2>
+                <img src="/CHAT-APP/imagenes/u2.webp" id="u2">
+            </div>
         </header>
-            <p>Nombre de usuario</p>
+            
             <h2>Canales</h2>
             <form action="#" id="canalInput">
-                <input type="text" placeholder="Nuevo canal">
+                <input type="text"  placeholder="Nuevo canal">
                 <input type="submit" value="+" id="addCanal">            
             
             </form>
 
-            <div id="list" class="list-container">
-
-                <div class="canal-container" id="1">
-                    <label>
-                        <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
-                        Canal 1
-                    </label>
-                    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
-                </div>
-                <div class="canal-container" id="1">
-                    <label>
-                        <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
-                        Canal 2
-                    </label>
-                    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
-                </div>
-            </div>
+            <div id="list" class="list-container"></div>
             
-            <div1>
             <h2>Mensajes Privados</h2>
-            <form action="#" id="canalInput">
-                <input type="text" placeholder="Nuevo canal">
-                <input type="submit" value="+" id="addCanal">            
+            <form action="#" id="mensajeInput">
+                <input type="text" placeholder="Nuevo mensaje">
+                <input type="submit" value="+" id="addMensaje">            
             
             </form>
 
-            <div id="list" class="list-container">
+            <div id="list2" class="list-container">
 
-                <div class="canal-container" id="1">
+                <!--<div class="list-container" id="1">
                     <label>
                         <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
                         Usiario 1
                     </label>
                     <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
                 </div>
-                <div class="canal-container" id="1">
-                    <label>
-                        <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
-                        Usuario 2
-
-                    </label>
-                    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
-                </div>
+            -->
             </div>
             
             
@@ -90,7 +69,7 @@
             <button type="submit" id="enviar">Enviar</button>
         
     </main> 
-  
+  <script src="/CHAT-APP/main.js"></script>
     
 </body>
 </html>

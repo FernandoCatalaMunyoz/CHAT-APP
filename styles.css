@@ -1,0 +1,136 @@
+:root{
+    --orange: #d95550;
+    --lightOrange: #dd6662;
+    --veryLightOrange: #f89e8b;
+    --gray: #55557b;
+    --white: #fff
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+   
+}
+form{
+    
+    width: 250px;
+}
+form input[type="text"][id="canalInput"] :focus{
+    outline: none;
+}
+form input[type="submit"][id="canalInput"]{
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border-style: none;
+}
+form input[type="submit"]:hover{
+    cursor: pointer;
+    color: blue;
+}
+.canal-container{
+    background-attachment: var(--white);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 5px;
+    font-size: 1.1em;
+}
+#closecanal{
+    width: 15px;
+    height: 15px;
+}
+#imagenUser{
+    width: 15px;
+    height: 15px;
+}
+#closecanal:hover{
+    cursor: pointer;
+}
+#u2{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside{
+    width: 250px;
+    height:850px;
+	background-color: orange;
+	display:inline-block;
+	font-size:15px;
+	vertical-align:top;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+aside h1 {
+    font-size: 35px;
+}
+input{
+    border-radius: 5px;
+}
+main {
+    background-color:lightblue;
+    width: 1000px;
+    height: 850px;
+    display: inline-block;
+    font-size:15px;
+	vertical-align:top;
+    padding-left: 5px;
+    border-color: blue;
+    border-radius: 5px;
+
+}
+
+
+#mensajenuevo {
+    padding-bottom: 0px;
+    padding-left: 5px;
+    right: 0px;
+    position: absolute;
+    bottom: 5px;
+    left: 325px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 100px;
+    
+}
+main input{
+   margin-left: 5px;
+    right: 0px;
+   padding-left: 5px;
+   border-radius: 5px;
+   display: inline-block;
+    
+}
+#buscar {
+   border-right: 0px;
+}
+#enviar{
+    height: 30px;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
