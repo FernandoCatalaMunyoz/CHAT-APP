@@ -1,6 +1,7 @@
 let IdCounter =0;
+let IdCounter2 =0;
 const input = document.querySelector('input[type="text"]');
-const input2 = document.querySelector('input[type="text"]')
+const input2 = document.querySelector('input[type="text"]');
 canalInput = document.getElementById('canalInput');
 mensajeInput = document.getElementById('mensajeInput');
 
@@ -26,16 +27,16 @@ let addCanal = ()=>{
   input.value = '';
 }
 
-mensajeInput.addEventListener('submit[id="addMensaje"]', ()=>{
+mensajeInput.addEventListener('submit', ()=>{
   addMensaje();
 });
 
 let addMensaje = ()=>{
-IdCounter++;
+IdCounter2++;
 
 let newValue2 = input2.value;
 
-list2.innerHTML += `<div class="list-container" id="${IdCounter}">
+list2.innerHTML += `<div class="list-container" id="${IdCounter2}">
 <label>
     <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
       ${newValue2}
