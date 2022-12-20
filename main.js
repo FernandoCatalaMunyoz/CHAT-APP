@@ -1,43 +1,73 @@
 let IdCounter = 0;
 let IdCounter2 = 0;
-
-const channels = [];
+let channels = [];
 const input = document.querySelector('input[type="text"]');
-
 canalInput = document.getElementById("canalInput");
 
+const printChannels = (channels) => {
+  console.log(channels)
+  list.innerHTML = '';
+  channels.forEach(element => {
+   list.innerHTML += `<div class="channel-class" id=${element.id}>
+     <label>
+         <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
+           ${element.name}
+     </label>
+     <img src="/CHAT-APP/imagenes/basura.png" id='closecanal${IdCounter}' class="closecanal">
+   </div>`;
+  });
+};
 
+list.addEventListener('click', (event)=>{
+  if(event.srcElement.nodeName === 'IMG'){
+    borrarCanal(event.srcElement.parentNode.id);
+  }
+
+  printMessages(event.srcElement.parentNode.id);
+});
+
+printMessages = (id) =>{
+  console.log("hey")
+}
 
 
 canalInput.addEventListener("submit", () => {
   addCanal();
 });
 
-let addCanal = () => {
+const addCanal = () => {
+  const newChannel = {
+    id: IdCounter,
+    name: input.value,
+    mensajes:[],
+  }
   IdCounter++;
-  console.log(input.value);
-  let newValue = input.value;
-  channels.push(newValue);
+  channels.push(newChannel);
   printChannels(channels);
-
   input.value = '';
 };
 
+// function selectChannel(){
+//   const selected= " ";
+//   console.log(channels)
+//   for(let i=0; i<channels.length; i++){
+//     if(channels[i].id === id){
+//       selected = 'patata';
+//     }
+//   }
+//   console.log('selected', selected);
+//   return selected;
+
+// }
 
 
-const printChannels = (channels) => {
-  console.log(channels)
-  list.innerHTML = '';
-  channels.forEach(element => {
-    console.log(element)
-   list.innerHTML += `<div class="canal-container" id="${IdCounter}">
-     <label>
-         <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
-           ${element}
-     </label>
-     <img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
-   </div>`;
-  });
+const borrarCanal = (id)=>{
+   for(let i=0; i<channels.length; i++){
+      if(channels[i].id == id){
+        channels.splice(channels.indexOf(channels[i]),1);
+      }
+   }
+   printChannels(channels)
 };
 
 

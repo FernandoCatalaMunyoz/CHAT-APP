@@ -1,25 +1,22 @@
-:root{
-    --orange: #d95550;
-    --lightOrange: #dd6662;
-    --veryLightOrange: #f89e8b;
-    --gray: #55557b;
-    --white: #fff
+h1,h2,h3,p,a,div{
+    margin:0;
+    padding:0;
 }
 
-
-*{
+*{  
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
    
 }
 form{
-    
+    border-radius: 50px;
     width: 250px;
 }
 form input[type="text"][id="canalInput"] :focus{
     outline: none;
+    ;
 }
-form input[type="submit"][id="canalInput"]{
+form input[type="submit"]{
     font-size: 10px;
     width: 20px;
     height: 20px;
@@ -37,8 +34,9 @@ form input[type="submit"]:hover{
     margin-bottom: 6px;
     padding: 5px;
     font-size: 1.1em;
+    cursor: pointer;
 }
-#closecanal{
+.closecanal{
     width: 15px;
     height: 15px;
 }
@@ -74,34 +72,39 @@ form input[type="submit"]:hover{
 
 
 aside{
-    width: 250px;
+    width: 25%;
     height:850px;
 	background-color: orange;
 	display:inline-block;
-	font-size:15px;
+	font-size: 50%;
 	vertical-align:top;
     padding-left: 5px;
     border-radius: 5px;
 }
 aside h1 {
-    font-size: 35px;
+    font-size: 150%;
 }
 input{
     border-radius: 5px;
 }
 main {
     background-color:lightblue;
-    width: 1000px;
+    position: absolute;
+    width: 75%;
     height: 850px;
     display: inline-block;
-    font-size:15px;
+    font-size:75%;
 	vertical-align:top;
     padding-left: 5px;
     border-color: blue;
     border-radius: 5px;
 
 }
+section{
+    background-color: red;
+    height:max-content
 
+}
 
 #mensajenuevo {
     padding-bottom: 0px;
@@ -117,14 +120,16 @@ main {
 }
 main input{
    margin-left: 5px;
-    right: 0px;
+   right: 0px;
    padding-left: 5px;
-   border-radius: 5px;
+   border-radius: 50px;
    display: inline-block;
     
 }
 #buscar {
-   border-right: 0px;
+   border-right: 150px;
+   padding-right: 0;
+   display:block
 }
 #enviar{
     height: 30px;
@@ -133,4 +138,12 @@ main input{
     border-radius: 5px;
     margin-left: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nombrechat{
+    background-color: yellow;
+}
+.buscador {
+    background-color: yellow;
+    display: inline-flexbox;
 }
