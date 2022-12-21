@@ -1,16 +1,23 @@
 let IdCounter = 0;
 let IdCounter2 = 0;
 let channels = [];
-const input = document.querySelector('input[type="text"]');
+let privmessages = []
+const input = document.getElementById('input');
 canalInput = document.getElementById("canalInput");
 
+const input2 = document.getElementById('input2');
+messageInput = document.getElementById("messageInput");
+
+
+
+
+
 const printChannels = (channels) => {
-  console.log(channels)
   list.innerHTML = '';
   channels.forEach(element => {
    list.innerHTML += `<div class="channel-class" id=${element.id}>
      <label>
-         <input type="image" src="/CHAT-APP/imagenes/live.png" id=imagenUser>
+         <input type="image" src="/CHAT-APP/imagenes/live.png" id=ImgCanal>
            ${element.name}
      </label>
      <img src="/CHAT-APP/imagenes/basura.png" id='closecanal${IdCounter}' class="closecanal">
@@ -18,34 +25,85 @@ const printChannels = (channels) => {
   });
 };
 
-list.addEventListener('click', (event)=>{
-  if(event.srcElement.nodeName === 'IMG'){
-    borrarCanal(event.srcElement.parentNode.id);
-  }
+const printMessages = (messages) => {
+  list2.innerHTML = '';
+  messages.forEach(element =>{
+    list2.innerHTML += `<div class="list-container" id=${element.id}>
+    <label>
+        <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
+        ${element.name}
+    </label>
+    <img src="/CHAT-APP/imagenes/basura.png" id="closecanal${IdCounter2}" class="closecanal">
+</div>`;
+  });
+};
 
-  printMessages(event.srcElement.parentNode.id);
-});
-
-printMessages = (id) =>{
-  console.log("hey")
-}
 
 
 canalInput.addEventListener("submit", () => {
   addCanal();
 });
 
+messageInput.addEventListener("submit",() =>{
+  addMessage();
+});
+
+const addMessage = () => {
+  const newPrivMessage = {
+    id: IdCounter2,
+    name: input2.value,
+    messages2:[],
+  }
+  IdCounter2++;
+  privmessages.push(newPrivMessage);
+  printMessages(privmessages);
+  input2.value = '';
+}
+
+
+
 const addCanal = () => {
   const newChannel = {
     id: IdCounter,
     name: input.value,
-    mensajes:[],
+    messages:[],
   }
   IdCounter++;
   channels.push(newChannel);
   printChannels(channels);
   input.value = '';
 };
+
+list.addEventListener('click', (event)=>{
+  if(event.srcElement.nodeName === 'IMG'){
+    deleteChannel(event.srcElement.parentNode.id);
+  }
+});
+
+list2.addEventListener('click', (event)=>{
+  if(event.srcElement.nodeName === 'IMG'){
+    console.log(event)
+    deletePrivMessage(event.srcElement.parentNode.id);
+  }
+});
+
+const deleteChannel = (id)=>{
+  for(let i=0; i<channels.length; i++){
+     if(channels[i].id == id){
+       channels.splice(channels.indexOf(channels[i]),1);
+     }
+  }
+  printChannels(channels);
+};
+
+const deletePrivMessage = (id)=>{
+  for(let j=0; j<privmessages.length; j++){
+    if(privmessages[j].id == id){
+      privmessages.splice(privmessages.indexOf(privmessages[j]),1);
+    }
+  }
+  printMessages(privmessages);
+}
 
 // function selectChannel(){
 //   const selected= " ";
@@ -60,45 +118,33 @@ const addCanal = () => {
 
 // }
 
+// Funcion añadir messages
+// const printMessages = (messages) => {
+//   list2.innerHTML = '';
+//   messages.forEach(element => {
+//    list2.innerHTML += `<div class="channel-class" id=${element.id}>
+//      <label>
+//          <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=ImgCanal>
+//            ${element.name}
+//      </label>
+//      <img src="/CHAT-APP/imagenes/basura.png" id='closecanal${IdCounter2}' class="closecanal">
+//    </div>`;
+//   });
+// };
 
-const borrarCanal = (id)=>{
-   for(let i=0; i<channels.length; i++){
-      if(channels[i].id == id){
-        channels.splice(channels.indexOf(channels[i]),1);
-      }
-   }
-   printChannels(channels)
-};
+// messageInput.addEventListener("submit", () => {
+//   addMessage();
+// });
 
-
-
-
-
-
-
-
-// Funcion añadir mensajes
-mensajeInput = document.getElementById("mensajeInput");
-
-let addMensaje = () => {
-  IdCounter2++;
-  let date = new Date();
-  
-  console.log(date.toLocaleTimeString(), date.toLocaleDateString());
-
-  let newValue2 = input2.value;
-
-  list2.innerHTML += `<div class="list-container" id="${IdCounter2}">
-<label>
-    <input type="image" src="/CHAT-APP/imagenes/hombre.png" id=imagenUser>
-      ${newValue2}
-</label>
-<img src="/CHAT-APP/imagenes/basura.png" id="closecanal">
-</div>`;
-
-  input.newValue2 = "";
-};
-mensajeInput.addEventListener("submit", () => {
-
-  addMensaje();
-});
+// const addMessage = () => {
+//   const newMessage = {
+//     id: IdCounter,
+//     name: input2.value,
+//     messages:[],
+//   }
+//   IdCounter2++;
+//   messages.push(newMessage);
+//   printChannels(messages);
+//   input2.value = '';
+// };
+// printMessages(messages)

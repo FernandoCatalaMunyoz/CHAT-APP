@@ -29,7 +29,7 @@ form input[type="submit"]:hover{
 }
 .canal-container{
     background-attachment: var(--white);
-    display: flex;
+    
     justify-content: space-between;
     margin-bottom: 6px;
     padding: 5px;
@@ -44,6 +44,11 @@ form input[type="submit"]:hover{
     width: 15px;
     height: 15px;
 }
+#ImgCanal{
+    width: 15px;
+    height: 15px;
+
+}
 #closecanal:hover{
     cursor: pointer;
 }
@@ -51,25 +56,6 @@ form input[type="submit"]:hover{
     width: 50px;
     height: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 aside{
     width: 25%;
@@ -139,11 +125,16 @@ main input{
     margin-left: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+#list{
+    display: grid;
+}
 .nombrechat{
     background-color: yellow;
 }
 .buscador {
     background-color: yellow;
     display: inline-flexbox;
+}
+.channel-class{
+    justify-content: space-between;
 }
