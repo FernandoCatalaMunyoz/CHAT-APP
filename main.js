@@ -15,7 +15,7 @@ messageInput = document.getElementById("messageInput");
 const printChannels = (channels) => {
   list.innerHTML = '';
   channels.forEach(element => {
-   list.innerHTML += `<div class="channel-class" id=${element.id}>
+   list.innerHTML += `<div class="canal-container" id=${element.id}>
      <label>
          <input type="image" src="/CHAT-APP/imagenes/live.png" id=ImgCanal>
            ${element.name}
